@@ -1,0 +1,37 @@
+.Contacts{
+  width: 99%;
+  min-height: 480px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: cadetblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+.user{
+  width: 160px;
+  height: 170px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: rgb(69, 81, 82);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin: 5px;
+}
+.modal{
+  width: 350px;
+  min-height: 380px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: rgb(163, 219, 219);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: fixed;
+  left: 37%;
+}
