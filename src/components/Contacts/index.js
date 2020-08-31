@@ -16,6 +16,12 @@ function Contacts() {
   function closeUser() {
     setModal(false);
   }
+  function delUser() {
+    setModal(false);
+    const findUsers = users.filter((el) => el.id !== modalUser.id);
+    setUsers(findUsers);
+    setUserContacts(findUsers);
+  }
 
   return (
     <>
@@ -24,6 +30,10 @@ function Contacts() {
           <div className="modal">
             <h5>{modalUser.name}</h5>
             <h6>{modalUser.phone}</h6>
+            <h6>{modalUser.email}</h6>
+            <h6>{modalUser.website}</h6>
+            <button type="button" onClick={() => { delUser(); }}>Удалить</button>
+            <button type="button" onClick={() => { closeUser(); }}>Редактировать</button>
             <button type="button" onClick={() => { closeUser(); }}>Закрыть</button>
           </div>
         )
