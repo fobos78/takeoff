@@ -6,7 +6,9 @@ import './Login.css';
 
 function Login() {
   const history = useHistory();
-  const { users, setUsers, header, setHeader, user, setUser } = useContext(ThemeContext);
+  const {
+    users, setUsers, header, setHeader, user, setUser,
+  } = useContext(ThemeContext);
   const [todo, setTodo] = useState('');
   const [message, setMesasge] = useState('');
   function inputChange(event) {
@@ -18,10 +20,9 @@ function Login() {
       setHeader({ ...header, login: false, logout: true });
       setUser(findUser);
       return history.push('/contacts');
-    } else {
-      setMesasge('Попробуйте еще раз');
-      setTodo('');
     }
+    setMesasge('Попробуйте еще раз');
+    setTodo('');
   }
   return (
     <div className="Login">

@@ -35,3 +35,10 @@
   position: fixed;
   left: 37%;
 }
+.chenge{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin: 5px;
+}
